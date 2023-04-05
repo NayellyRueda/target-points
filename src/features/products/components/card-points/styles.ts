@@ -1,7 +1,6 @@
 import styled from "styled-components/native";
 import { colors } from "../../../../theme/custom-theme";
 
-
 export const Card = styled.View`
     background-color: ${colors.blue.hue};
     border-radius: 15px;

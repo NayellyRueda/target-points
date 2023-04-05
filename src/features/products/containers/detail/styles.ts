@@ -1,7 +1,6 @@
 import styled from "styled-components/native";
 import { TextProps } from "../interfaces";
 
-
 export const CardImage = styled.View`
     border-radius: 12px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);

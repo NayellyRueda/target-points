@@ -3,7 +3,7 @@ import { colors } from "../../theme/custom-theme";
 import { TextProps, TouchableProps } from "../interface";
 
 export const Touchable = styled.TouchableOpacity<TouchableProps>`
-    background-color: ${({ background }) => (background ? 'blue' : colors.blue.hue)};
+    background-color: ${({ background }) => (background ? colors.blue.hue : colors.blue.hue)};
     margin: 22px;
     border-radius: 12px;
     padding: 15px;

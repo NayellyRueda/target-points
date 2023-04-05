@@ -3,12 +3,7 @@ import { AntDesign } from '@expo/vector-icons';
 import moment from "moment";
 
 import { RowContainer, NameProduct, Date, ProductPoints, ContainerPoints, ContainerWidth, Image } from "./styles";
-import { getProductsResponse } from "services/products/interfaces";
-
-interface InfoCardProductProps {
-    product: getProductsResponse;
-    onPress: () => void;
-};
+import { InfoCardProductProps } from "../interfaces";
 
 export default function InfoCardProduct (props: InfoCardProductProps) {
     const { product, onPress } = props;

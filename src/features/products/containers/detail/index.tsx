@@ -8,23 +8,21 @@ import { CardImage, ContainerDescription, Image, TextDescriptions } from "./styl
 
 export default function DetailScreen ({route}) {
     const { item } = route.params;
-    moment.locale('es')
     const navigation = useNavigation();
+    moment.locale('es')
 
     return (
         <Container>
-            <>
-                <CardImage>
-                    <Image source={{uri: item.image }} />
-                </CardImage>
-                <ContainerDescription>
-                    <TextDescriptions color={colors.scalesGrey.gris_60MB}>Detalles del producto: {item.product}</TextDescriptions>
-                    <TextDescriptions>Comprado en {moment(item.createdAt).format('LL')}</TextDescriptions>
-                    <TextDescriptions color={colors.scalesGrey.gris_60MB}>Con esta compra {item.is_redemption ? 'acumulaste' : 'canjeaste'}:</TextDescriptions>
-                    <TextDescriptions fontSize={22}>{item.points.toLocaleString()} puntos</TextDescriptions>
-                </ContainerDescription>
-                <Button onPress={() => navigation.goBack()} text="Aceptar"/>
-            </>
+            <CardImage>
+                <Image source={{uri: item.image }} />
+            </CardImage>
+            <ContainerDescription>
+                <TextDescriptions color={colors.scalesGrey.gris_60MB}>Detalles del producto: {item.product}</TextDescriptions>
+                <TextDescriptions>Comprado en {moment(item.createdAt).format('LL')}</TextDescriptions>
+                <TextDescriptions color={colors.scalesGrey.gris_60MB}>Con esta compra {item.is_redemption ? 'acumulaste' : 'canjeaste'}:</TextDescriptions>
+                <TextDescriptions fontSize={22}>{item.points.toLocaleString()} puntos</TextDescriptions>
+            </ContainerDescription>
+            <Button onPress={() => navigation.goBack()} text="Aceptar"/>
         </Container>
     );
 }
