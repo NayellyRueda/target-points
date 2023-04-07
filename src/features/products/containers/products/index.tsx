@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from "react";
+import React from "react";
 import { useNavigation } from "@react-navigation/native";
 
 import Container from "../../../../components/container";
