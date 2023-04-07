@@ -29,7 +29,7 @@ export const NameProduct = styled.Text`
 
 export const ProductPoints = styled.Text<PointsText>`
     font-weight: 600;
-    color: ${({ color }) => color ?? ""};
+    color: ${({ color }) => color ?? "black"};
 `;
 
 export const RowContainer = styled.TouchableOpacity`

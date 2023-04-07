@@ -12,7 +12,7 @@ import useProducts from "./useProducts";
 export default function Products (props: ProductsProps) {
     const { data } = props;
     const navigation = useNavigation();
-    const { rows, showAll, handleWinnersButtonClick, handleLoserButtonClick, handleAllButtonClick } = useProducts(data);
+    const { rows, dataCard, showAll, handleWinnersButtonClick, handleLoserButtonClick, handleAllButtonClick } = useProducts(data);
 
     return (
         <Container>  
@@ -20,8 +20,8 @@ export default function Products (props: ProductsProps) {
             <NameUser>Ruben Rodriguez</NameUser>
             <TitleSection>TUS PUNTOS</TitleSection>
             <Cardpoints
-                month="Diciembre"
-                totalPoints="10,00.00"
+                month={dataCard?.month ?? ""}
+                totalPoints={dataCard?.totalPoints.toLocaleString() ?? 0}
             />
             <TitleSection>Tus Movimientos</TitleSection>
             <ProductSection>

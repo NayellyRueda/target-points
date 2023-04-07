@@ -10,15 +10,15 @@ export default function InfoCardProduct (props: InfoCardProductProps) {
     return (
         <RowContainer onPress={onPress}>
             <ContainerWidth  width='25%'>
-                <Image source={{uri: product.image}}/>
+                <Image source={{uri: product?.image}}/>
             </ContainerWidth>
             <ContainerWidth width='50%'>
                 <NameProduct>{product?.product}</NameProduct>
                 <Date>{moment(product?.createdAt).format('LL')}</Date>
             </ContainerWidth>
             <ContainerPoints>
-                <ProductPoints color={product.is_redemption ? 'green' : 'red'}>{product.is_redemption ? '+' : '-'}</ProductPoints> 
-                <ProductPoints>{product.points.toLocaleString()}</ProductPoints>
+                <ProductPoints color={product?.is_redemption ? 'green' : 'red'}>{product?.is_redemption ? '+' : '-'}</ProductPoints> 
+                <ProductPoints>{product?.points?.toLocaleString()}</ProductPoints>
                 <AntDesign name="right" size={15} color="black" />
             </ContainerPoints>
         </RowContainer>

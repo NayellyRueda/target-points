@@ -19,7 +19,7 @@ export const Image = styled.Image`
 
 export const TextDescriptions = styled.Text<TextProps>`
     font-weight: 600;
-    color: ${({ color }) => color ?? ""};
+    color: ${({ color }) => color ?? "black"};
     font-size: ${({ fontSize }) => fontSize};
     line-height: 32px;
 `;

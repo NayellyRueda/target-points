@@ -2,7 +2,7 @@ import { getProductsResponse } from "services/products/interfaces";
 
 export interface CardPointsProps {
     month: string;
-    totalPoints: string;
+    totalPoints: string | number;
 };
 
 export interface InfoCardProductProps {

@@ -1,12 +1,12 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 
-import Button from "./index";
+import Container from "./index";
 
-describe('functional button', () => {
+describe('functional container', () => {
     let component;
     beforeEach(() => {
-        component = renderer.create(<Button/>).toJSON();
+        component = renderer.create(<Container/>).toJSON();
     });
 
     it('has 1 child', () => {

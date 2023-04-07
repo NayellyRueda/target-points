@@ -8,3 +8,8 @@ export interface TextProps {
     fontSize?: number;
     color?: string;  
 };
+
+export interface dataCardProps {
+    totalPoints: number;
+    month: string;
+};
